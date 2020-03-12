@@ -8,6 +8,7 @@ require_relative "brooklyn_museum/scraper"
 
 require "pry"
 require "nokogiri"
+require "open-uri"
 
 
 
