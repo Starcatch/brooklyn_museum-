@@ -1,2 +1,3 @@
 class BrooklynMuseum::EXHIBITIONS
+  
 end 

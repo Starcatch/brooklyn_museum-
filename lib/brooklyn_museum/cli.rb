@@ -7,7 +7,7 @@ class BrooklynMuseum::CLI
   end 
   
   def get_list_of_exhibits
-    @names = ["ART", "Brooklyn", "Museum"]
+    @names = BrooklynMuseum::EXHIBITIONS.all
   end 
   
   def list_these_exhibit
