@@ -3,16 +3,15 @@ class BrooklynMuseum::EXHIBITIONS
   
   attr_accessor :title 
   
-  def self.all
-    @@all
-    save 
-  end 
+ 
    
    def initialize(title)
-     @title = title 
+     @title = title
+     save 
    end 
    
    def self.all
+     BrooklynMuseum::SCRAPER.scrape_exhibitions if @@all.empty?
      @@all
    end 
    
