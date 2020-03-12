@@ -1,6 +1,11 @@
 class BrooklynMuseum::SCRAPER
       def self.scrape_exhibitions
         page = Nokogiri::HTML(open("https://www.brooklynmuseum.org/exhibitions"))
-        binding.pry
+        
+        exhibits = page.css("div.image-card h2")
+        exhibits.each do |exhibit|
+        title = exhibit.text
+        
       end 
+    end 
 end 
