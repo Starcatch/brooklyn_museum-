@@ -4,10 +4,10 @@
 require_relative "brooklyn_museum/version"
 require_relative "brooklyn_museum/cli"
 require_relative "brooklyn_museum/exhibitions"
-#require_relative "brooklyn_museum/scraper"
+require_relative "brooklyn_museum/scraper"
 
 require "pry"
-
+require "nokogiri"
 
 
 

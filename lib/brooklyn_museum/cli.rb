@@ -7,8 +7,7 @@ class BrooklynMuseum::CLI
   end 
   
   def get_list_of_exhibits
-     BrooklynMuseum::EXHIBITIONS.new("african")
-     BrooklynMuseum::EXHIBITIONS.new("modern")
+     
     @names = BrooklynMuseum::EXHIBITIONS.all
    
   end 
