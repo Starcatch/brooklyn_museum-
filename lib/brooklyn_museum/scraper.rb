@@ -5,6 +5,7 @@ class BrooklynMuseum::SCRAPER
         exhibits = page.css("div.image-card h2")
         exhibits.each do |exhibit|
         title = exhibit.text
+        BrooklynMuseum::EXHIBITIONS.new(title)
         
       end 
     end 
