@@ -7,13 +7,16 @@ class BrooklynMuseum::CLI
   end 
   
   def get_list_of_exhibits
+     BrooklynMuseum::EXHIBITIONS.new("african")
+     BrooklynMuseum::EXHIBITIONS.new("modern")
     @names = BrooklynMuseum::EXHIBITIONS.all
+   
   end 
   
   def list_these_exhibit
     puts "Choose an exhibit to see a description"
     @names.each.with_index(1) do |exhibit, index|
-      puts "#{index}. #{exhibit}"
+      puts "#{index}. #{exhibit.title}"
   end 
  end
   
@@ -29,7 +32,7 @@ class BrooklynMuseum::CLI
   def show_description_for(chosen_exhibit)
     exhibit = @names[chosen_exhibit-1]
     puts "Here is a few words about #{exhibit}"
-    binding.pry
+   
   end 
   
 end 
