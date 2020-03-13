@@ -30,7 +30,10 @@ class BrooklynMuseum::CLI
   
   def show_description_for(chosen_exhibit)
     exhibit = @names[chosen_exhibit-1]
+    descriptions = exhibit.descriptions
     puts "Here is a few words about #{exhibit.title}"
+    #dispays descriptions
+    #displays dates 
    
   end 
   
