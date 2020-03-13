@@ -6,8 +6,8 @@ class BrooklynMuseum::EXHIBITIONS
   
  
    
-   def initialize(title)
-     @@all = []
+   def initialize(descriptions)
+     
      @descriptions = descriptions
      @dates = dates 
      #title.descriptions << self
@@ -24,11 +24,11 @@ class BrooklynMuseum::EXHIBITIONS
    end 
    
    def get_descriptions
-    BrooklynMuseum::Scraper.scrape_descriptions
+    BrooklynMuseum::SCRAPER.scrape_descriptions
    end
    
    def get_dates 
-    BrooklynMuseum::Scraper.scrape_dates
+    BrooklynMuseum::SCRAPER.scrape_dates
    end 
    
   

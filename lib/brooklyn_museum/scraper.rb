@@ -10,9 +10,13 @@ class BrooklynMuseum::SCRAPER
     end 
     
     def scrape_descriptions
+      #scrape here
+      BrooklynMuseum::EXHIBITIONS.new(descriptions)
       
     end 
     
     def scrape_dates
+      #scrape here 
+      BrooklynMuseum::EXHIBITIONS.new(dates)
     end 
 end 
