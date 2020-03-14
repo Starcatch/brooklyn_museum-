@@ -1,22 +1,28 @@
-class BrooklynMuseum::SCRAPER
+class BrooklynMuseum::Scraper
       def self.scrape_exhibitions
         page = Nokogiri::HTML(open("https://www.brooklynmuseum.org/exhibitions"))
         
-        names = page.css("div.image-card h2")
-        names.each do |exhibit|
-        title = exhibit.text
-        BrooklynMuseum::EXHIBITIONS.new(title)
+        exhibitions = page.css("div.image-card")
+        exhibitions.each do |e|
+        name = n.css("h2").text.strip
+        dates = d.css("h4").text.strip
+        url = u.css("h2 a").attr("href").value
+        BrooklynMuseum::Exhibitions.new(name,dates,url)
+
       end 
     end 
     
-    def scrape_descriptions
-      #scrape here
-      BrooklynMuseum::EXHIBITIONS.new(descriptions)
+    #def scrape_descriptions
       
-    end 
+      #BrooklynMuseum::Exhibitions.new(descriptions)
+      
+    #end 
     
-    def scrape_dates
+    #def scrape_dates
       #scrape here 
-      BrooklynMuseum::EXHIBITIONS.new(dates)
-    end 
+      #BrooklynMuseum::Exhibitions.new(dates)
+    #end 
+
+    #def scrape_url
+    #end 
 end 

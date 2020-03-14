@@ -1,33 +1,40 @@
-class BrooklynMuseum::CLI
+class BrooklynMuseum::Cli
+  
   def call 
-    puts "\nWelcome to Brooklyn Museum!\n"
-    
-     
+    puts "\n---Hello and Welcome to Brooklyn Museum!---\n"
+    BrooklynMuseum::Scraper.new.scrape_exhibitions
+    @input = ""
+    until @input == "exit!"
+    list_exhibitions
+    show_details
+    whats_next
   end 
-  
-  def get_list_of_exhibits
-     
-  
-   
-  end 
-  
-  def list_these_exhibit
-  
-   
  end
-  
-  def get_user_input
-   
-   end
-   
-   def valid_input(input, data)
-    
+  goodbye
   end 
   
-  def show_description_for(chosen_exhibit)
-
-    
-  
+  def list_exhibitions #gets list of Exnibitions as numbered list 
+     BrooklynMuseum::Exhibitions.all.each.with_index(1) do |exhibition, index|
+       puts "#{index}. #{exhibition.title}"
+  end 
+ end 
  
+
+def show_details(input)
+  if input.to_i <= BrooklynMuseum::Exhibitions.all.length && input.to_i > 0
+    obj = BrooklynMuseum::Exhibitions.all[input.to_i - 1]
+
+    puts "Here is the name of the chosen exhibition: #{obj.name} !"
+    puts "Here are the dates for your exhibition: #{obj.dates}!"
+    puts "For more information follow the website: #{obj.url}"
+    #puts obj.info #description
+  else 
+    puts "Please enter a valid key"
+  end 
 end 
-  
+
+ def  goodbye 
+  puts "Thank you for visiting Brooklyn!" 
+ end 
+end 
+
