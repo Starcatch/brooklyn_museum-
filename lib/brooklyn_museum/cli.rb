@@ -31,7 +31,7 @@ class BrooklynMuseum::Cli
     
     if input == "list"
       list_exhibitions
-    else  input.to_i > 0
+    elsif  input.to_i > 0
       selection = @exhibitions[input.to_i-1]
       puts ""
       puts "------#{selection.name}------"
@@ -41,8 +41,9 @@ class BrooklynMuseum::Cli
       puts "To find out more about this exhibition, please follow the link:"
       puts "link : #{selection.url}"
       puts ""
-      
-    end
+    else "bad chose"
+   end 
+  end
  end 
   
   def goodbye
