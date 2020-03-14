@@ -7,16 +7,21 @@ class BrooklynMuseum::Exhibitions
   
  
    
-   def initialize(name)
+   def initialize(name, dates, url)
      @name = name
      @dates = dates 
      @url = url
-     @@all << self
-     #@descriptions = descriptions
+     save
+     
    end 
    
    def self.all
+     
    @@all
    end 
+    
+    def save
+    @@all << self
+  end
   
 end 
