@@ -35,16 +35,16 @@ class BrooklynMuseum::Cli
    input.to_1 <= data.length && input.to_i > 0
  end 
  
- def show_info(selected_ixhibition)
-   ixhibition = @exhibitions[selected_ixhibition-1]
-   ixhibition.get_info
-   puts "Here is information for exhibition for #{exhibition.name}" #displays name of the exhibition
+ def  #find by number/show_info
+     #puts here is your info
+   #displays all the info about exhibition
+   #possibly invoking our scraper class
+   
+   
  end 
   
-  def show_exhibition_details(exhibition)
-    puts exhibition.name
+  
     
-  end 
   
  
  
