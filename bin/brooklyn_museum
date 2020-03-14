@@ -3,5 +3,5 @@
 
 require_relative "../lib/brooklyn_museum" 
 
-BrooklynMuseum::CLI.new.call
+BrooklynMuseum::Cli.new.call
 

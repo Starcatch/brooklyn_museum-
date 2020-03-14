@@ -1,7 +1,7 @@
 class BrooklynMuseum::Exhibitions
   
   
-  attr_accessor   :name, :dates, : url  #description
+  attr_accessor   :name, :dates, :url  #description
    
   @@all = []
   

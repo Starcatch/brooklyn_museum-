@@ -2,13 +2,14 @@ class BrooklynMuseum::Cli
   
   def call 
     puts "\n---Hello and Welcome to Brooklyn Museum!---\n"
-    BrooklynMuseum::Scraper.new.scrape_exhibitions
+   
     @input = ""
     until @input == "exit!"
+    BrooklynMuseum::Scraper.new.self.scrape_exhibitions
     list_exhibitions
     show_details
     whats_next
-  end 
+  
  end
   goodbye
   end 
@@ -32,9 +33,11 @@ def show_details(input)
     puts "Please enter a valid key"
   end 
 end 
-
- def  goodbye 
-  puts "Thank you for visiting Brooklyn!" 
- end 
+  
+  def  goodbye 
+   puts "Thank you for visiting Brooklyn!" 
+  end 
+ 
+ 
 end 
 
