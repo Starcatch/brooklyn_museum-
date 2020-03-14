@@ -1,6 +1,6 @@
 class BrooklynMuseum::Scraper
       
-      def self.scrape_exhibitions
+      def scrape_exhibitions
         page = Nokogiri::HTML(open("https://www.brooklynmuseum.org/exhibitions"))
         
         exhibitions = page.css("div.image-card")

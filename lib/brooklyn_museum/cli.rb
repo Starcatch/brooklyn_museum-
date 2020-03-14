@@ -5,7 +5,6 @@ class BrooklynMuseum::Cli
    
     @input = ""
     until @input == "exit!"
-    BrooklynMuseum::Scraper.new.self.scrape_exhibitions
     list_exhibitions
     show_details
     whats_next
@@ -14,16 +13,18 @@ class BrooklynMuseum::Cli
   goodbye
   end 
   
-  def list_exhibitions #gets list of Exnibitions as numbered list 
-     BrooklynMuseum::Exhibitions.all.each.with_index(1) do |exhibition, index|
-       puts "#{index}. #{exhibition.title}"
+  def  get_exhibitions
+    @exhibitions = BrooklynMuseum::Exhibitions
   end 
- end 
+  
+ end list_exhibitions
+ puts "Here is the name of the chosen exhibition:"
  
 
-def show_details(input)
-  if input.to_i <= BrooklynMuseum::Exhibitions.all.length && input.to_i > 0
-    obj = BrooklynMuseum::Exhibitions.all[input.to_i - 1]
+def show_details(selection)
+  
+  if selection <= BrooklynMuseum::Exhibitions.all.length && selection> 0
+    obj = BrooklynMuseum::Exhibitions.all[selection.to_i - 1]
 
     puts "Here is the name of the chosen exhibition: #{obj.name} !"
     puts "Here are the dates for your exhibition: #{obj.dates}!"
