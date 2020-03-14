@@ -47,7 +47,7 @@ class BrooklynMuseum::Cli
   
   def goodbye
     puts "Thank you for visiting our museum!"
-    puts "E.ART.H with out ART, is just EH!"
+    puts "EARTH with out ART, is just EH!"
   end 
   
 end 
