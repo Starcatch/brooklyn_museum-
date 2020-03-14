@@ -40,20 +40,11 @@ class BrooklynMuseum::Cli
    ixhibition.get_info
    puts "Here is information for exhibition for #{exhibition.name}" #displays name of the exhibition
  end 
- 
- #somehow to come up with something ho to display dates and url
- # def get_user_event(month)
-    #puts "Choose an event to see more details."
-    #input = gets.strip
-    #event = month.events[input.to_i - 1]
-    #event.get_event_details
-    #show_event_details(event)
-  #end
   
-  #def show_event_details(event)
-    #puts event.name
-    #event.key_info.each {|i| puts "- #{i}"}
-  #end 
+  def show_exhibition_details(exhibition)
+    puts exhibition.name
+    
+  end 
   
  
  

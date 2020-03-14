@@ -16,6 +16,7 @@ class BrooklynMuseum::Exhibitions
    end 
    
    def self.all
+     BrooklynMuseum::Scraper.scrape_exhibitions if @@all.empty?
      
    @@all
    end 
