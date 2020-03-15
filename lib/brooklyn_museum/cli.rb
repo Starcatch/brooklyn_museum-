@@ -12,9 +12,11 @@ class BrooklynMuseum::Cli
   
   
   def welcome
+    puts""
     puts "---WELCOME TO BROOKLYN MUSEUM!---".colorize(:green)
     puts""
     puts "Here is the list of our current exhibitions:"
+    puts "______________________________________________"
     puts ""
   end 
   
@@ -29,7 +31,9 @@ class BrooklynMuseum::Cli
     input =""
     while input != "exit"
     puts ""
-    puts "Enter the number of the exhibition you would like to see more infor on, type " + "--- 'list'---".colorize(:yellow) + "the list of current ehibitions again."
+    puts "Enter the number of the exhibition you would like to see more infor on, type " +    "--- 'list' ---".colorize(:yellow) + " the list of current ehibitions again."
+    puts ""
+    puts "Type " + " 'exit' ".colorize(:red) + " to exit our museum."
    
     input=gets.strip.downcase
     
@@ -38,12 +42,13 @@ class BrooklynMuseum::Cli
     elsif  input.to_i > 0
       selection = @exhibitions[input.to_i-1]
       puts ""
-      puts "------#{selection.name}------"
+      puts "------#{selection.name}------".colorize.(:green)
       puts ""
-      puts "Here are the exhibition dates: #{selection.dates}"
+      puts "Here are the exhibition dates:  " + " #{selection.dates}".colorize(:green)
       puts ""
       puts "To find out more about this exhibition, please follow the link:"
-      puts " #{selection.url}"
+      puts ""
+      puts "#{selection.url}".colorize(:green)
       puts ""
     else "Please select a valid key!"
    end #of elsif

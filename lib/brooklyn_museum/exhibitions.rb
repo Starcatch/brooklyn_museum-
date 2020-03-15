@@ -4,9 +4,9 @@ class BrooklynMuseum::Exhibitions
   
   @@exhibitions = []
    
-   def initialize(name, date, url)
+   def initialize(name, dates, url)
      @name = name 
-     @date = dates 
+     @dates = dates 
      @url = url
      @@exhibitions << self 
   end 
