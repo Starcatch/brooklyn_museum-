@@ -14,6 +14,7 @@ require "open-uri"
 
 
 module BrooklynMuseum
-  class Error < StandardError; end
+  class Error < StandardError; 
   # Your code goes here...
 end
+end 

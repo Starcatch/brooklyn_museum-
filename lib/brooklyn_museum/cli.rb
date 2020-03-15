@@ -1,7 +1,9 @@
+
+
 class BrooklynMuseum::Cli
   
   def call
-    BrooklynMuseum::Scraper.make_exhibitions
+  BrooklynMuseum::Scraper.make_exhibitions
     welcome
     list_exhibitions
     pick_exhibition
@@ -42,15 +44,15 @@ class BrooklynMuseum::Cli
       puts "link : #{selection.url}"
       puts ""
     else "bad chose"
-   end 
-  end
- end 
+   end #of elsif
+  end #of if
+ end #of pick_exhibition
   
   def goodbye
     puts "Thank you for visiting our museum!"
     puts "EARTH with out ART, is just EH!"
-  end 
-  
-end 
+  end #of goodbye
+ 
+end #end of class
 
  
