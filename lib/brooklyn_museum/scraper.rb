@@ -12,13 +12,13 @@ class BrooklynMuseum::Scraper
   
   def self.get_exhibition_nodes
         page = get_page
-        container = page.css("div.image-card")
-        container.css("div.image-card h2")
+        container = page.css("div.card-container")
+        container.css("div.image-card")
   end 
 
 
   def self.node_to_exhibition(node)
-        link = node.css("h3 a")
+        link = node.css("h2 a")
         name = link.text.strip
         url = link.attr("href")
         dates = node.css("h4").text.strip
