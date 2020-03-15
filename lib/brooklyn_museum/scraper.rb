@@ -27,7 +27,7 @@ class BrooklynMuseum::Scraper
 
 
   def self.get_exhibitions
-        get_exhibitions_nodes.map { |node| node_to_exhibition node}
+        get_exhibition_nodes.map { |node| node_to_exhibition node}
   end 
 
 end 

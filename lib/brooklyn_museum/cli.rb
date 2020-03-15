@@ -3,7 +3,7 @@
 class BrooklynMuseum::Cli
   
   def call
-  BrooklynMuseum::Scraper.make_exhibitions
+  BrooklynMuseum::Scraper.get_exhibitions
     welcome
     list_exhibitions
     pick_exhibition

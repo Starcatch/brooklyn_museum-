@@ -1,4 +1,4 @@
-class Exhibitions
+class BrooklynMuseum::Exhibitions
   
   attr_accessor :name, :dates, :url
   
