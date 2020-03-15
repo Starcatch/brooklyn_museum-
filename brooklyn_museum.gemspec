@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Timur Mishiev'"]
   spec.email         = ["'timurmishiev@gmail.com'"]
 
-  spec.summary       = "Scrapes data from Brooklyn Museum"
-  spec.description   = "Scrapes data from Brooklyn Museum"
+  spec.summary       = "Shows Exhibitions from Brooklyn Museum"
+  spec.description   = "Delivers information about current exhibitions of Brooklyn Museum."
   spec.homepage      = "https://github.com/Starcatch/learn-co-sandbox/tree/master/brooklyn_museum"
   spec.license       = "MIT"
 

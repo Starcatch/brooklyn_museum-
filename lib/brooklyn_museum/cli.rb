@@ -13,7 +13,8 @@ class BrooklynMuseum::Cli
   
   def welcome
     puts "---Welcome to Brooklyn Museum!---"
-    puts "Here is the list of our current exhibitions"
+    puts""
+    puts "Here is the list of our current exhibitions:"
     puts ""
   end 
   
@@ -41,16 +42,17 @@ class BrooklynMuseum::Cli
       puts "Here are the exhibition dates: #{selection.dates}"
       puts ""
       puts "To find out more about this exhibition, please follow the link:"
-      puts "link : #{selection.url}"
+      puts " #{selection.url}"
       puts ""
-    else "bad chose"
+    else "Please select a valid key!"
    end #of elsif
   end #of if
  end #of pick_exhibition
   
   def goodbye
     puts "Thank you for visiting our museum!"
-    puts "EARTH with out ART, is just EH!"
+    puts ""
+    puts "Goodbye"
   end #of goodbye
  
 end #end of class
