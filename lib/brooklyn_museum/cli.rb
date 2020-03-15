@@ -1,4 +1,4 @@
-
+require "colorize"
 
 class BrooklynMuseum::Cli
   
@@ -12,7 +12,7 @@ class BrooklynMuseum::Cli
   
   
   def welcome
-    puts "---Welcome to Brooklyn Museum!---"
+    puts "---WELCOME TO BROOKLYN MUSEUM!---".colorize(:green)
     puts""
     puts "Here is the list of our current exhibitions:"
     puts ""
@@ -29,7 +29,8 @@ class BrooklynMuseum::Cli
     input =""
     while input != "exit"
     puts ""
-    puts "Enter the number of the exhibition you would like to see more infor on, type --- 'list'--- the list of current ehibitions again."
+    puts "Enter the number of the exhibition you would like to see more infor on, type " + "--- 'list'---".colorize(:yellow) + "the list of current ehibitions again."
+   
     input=gets.strip.downcase
     
     if input == "list"
@@ -51,9 +52,10 @@ class BrooklynMuseum::Cli
   
   def goodbye
     puts""
-    puts "Thank you for visiting our museum!"
+    puts "Thank you for visiting our museum!".colorize(:green)
     puts ""
-    puts "Goodbye"
+    puts "Goodbye!"
+    puts ""
   end #of goodbye
  
 end #end of class
