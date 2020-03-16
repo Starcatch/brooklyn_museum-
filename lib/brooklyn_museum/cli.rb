@@ -39,9 +39,7 @@ class BrooklynMuseum::Cli
     
     if input == "list"
       list_exhibitions
-      elsif input.to_i>9
-        puts "---There is no exhibition for this selecton--".colorize.(:red)
-        pick_exhibition
+      
     elsif  input.to_i > 0
       selection = @exhibitions[input.to_i-1]
       puts ""
