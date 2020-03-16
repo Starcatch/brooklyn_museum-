@@ -4,11 +4,11 @@ require 'open-uri'
 
 class BrooklynMuseum::Scraper
 
+
   def self.get_page
       Nokogiri::HTML(open("https://www.brooklynmuseum.org/exhibitions"))
   end 
 
-  
   
   def self.get_exhibition_nodes
         page = get_page
@@ -29,5 +29,4 @@ class BrooklynMuseum::Scraper
   def self.get_exhibitions
         get_exhibition_nodes.map { |node| node_to_exhibition node}
   end 
-
 end 

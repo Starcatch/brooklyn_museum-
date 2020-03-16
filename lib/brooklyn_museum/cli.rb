@@ -39,10 +39,13 @@ class BrooklynMuseum::Cli
     
     if input == "list"
       list_exhibitions
+      elsif input.to_i>9
+        puts "---There is no exhibition for this selecton--".colorize.(:red)
+        pick_exhibition
     elsif  input.to_i > 0
       selection = @exhibitions[input.to_i-1]
       puts ""
-      puts "------#{selection.name}------".colorize.(:green)
+      puts "------#{selection.name}------".colorize(:green)
       puts ""
       puts "Here are the exhibition dates:  " + " #{selection.dates}".colorize(:green)
       puts ""
@@ -50,7 +53,7 @@ class BrooklynMuseum::Cli
       puts ""
       puts "#{selection.url}".colorize(:green)
       puts ""
-    else "Please select a valid key!"
+    
    end #of elsif
   end #of if
  end #of pick_exhibition
