@@ -13,7 +13,7 @@ class BrooklynMuseum::Scraper
   def self.get_exhibition_nodes
         page = get_page
         container = page.css("div.card-container")
-        container.css("div.image-card")
+        container.css("div.image-card").take(9)
   end 
 
 
