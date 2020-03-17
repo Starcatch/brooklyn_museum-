@@ -18,7 +18,7 @@ class BrooklynMuseum::Scraper
 
 
   def self.node_to_exhibition(node)
-        link = node.css("h2 a")
+        link = node.css("h2 a") 
         name = link.text.strip
         url = link.attr("href")
         dates = node.css("h4").text.strip

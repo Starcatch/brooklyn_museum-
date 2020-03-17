@@ -24,6 +24,7 @@ class BrooklynMuseum::Cli
     @exhibitions = BrooklynMuseum::Exhibitions.all
     @exhibitions.each.with_index(1) do |exhibition, index|
       puts "#{index}. #{exhibition.name} " #name of exhibition
+      puts ""
     end 
   end 
   
@@ -39,8 +40,9 @@ class BrooklynMuseum::Cli
     
     if input == "list"
       list_exhibitions
+    puts""
     elsif input.to_i > 9
-    puts "Choose a different key!"
+    puts "Bad choice!".colorize(:red)
     elsif  input.to_i > 0
       selection = @exhibitions[input.to_i-1]
       puts ""
