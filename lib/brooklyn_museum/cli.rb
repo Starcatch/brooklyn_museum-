@@ -23,7 +23,7 @@ class BrooklynMuseum::Cli
   def list_exhibitions
     @exhibitions = BrooklynMuseum::Exhibitions.all
     @exhibitions.each.with_index(1) do |exhibition, index|
-      puts "#{index}. #{exhibition.name} " #name of exhibition
+      puts "#{index}. #{exhibition.name} " #number and name of exhibition
       puts ""
     end 
   end 
@@ -32,7 +32,7 @@ class BrooklynMuseum::Cli
     input =""
     while input != "exit"
     puts ""
-    puts "Enter the number of the exhibition you would like to see more infor on, type " +    "--- 'list' ---".colorize(:yellow) + " the list of current ehibitions again."
+    puts "Enter the number of the exhibition you would like to see more infor on, type  " +    "\n--- 'list' ---".colorize(:yellow) + " the list of current ehibitions again."
     puts ""
     puts "Type " + " 'exit' ".colorize(:red) + " to exit our museum."
    
@@ -41,7 +41,7 @@ class BrooklynMuseum::Cli
     if input == "list"
       list_exhibitions
     puts""
-    elsif input.to_i > 9
+    elsif input.to_i > @exhibitions.length 
     puts "Bad choice!".colorize(:red)
     elsif  input.to_i > 0
       selection = @exhibitions[input.to_i-1]
